@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+install_emscripten() {
+    local install_type=$1
+    local version=$2
+    local install_path=$3
+
+    git clone --branch "${version}" https://github.com/emscripten-core/emsdk.git "${install_path}"
+    "${install_path}/emsdk" install "${version}"
+    "${install_path}/emsdk" activate "${version}"
+}
+
+install_emscripten $ASDF_INSTALL_TYPE $ASDF_INSTALL_VERSION $ASDF_INSTALL_PATH
