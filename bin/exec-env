@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+echo "AFSDFDSAS";
 if [ -n "$ASDF_INSTALL_PATH" ]; then
   "${ASDF_INSTALL_PATH}/emsdk" activate "${ASDF_INSTALL_VERSION}"
   source "${ASDF_INSTALL_PATH}/emsdk_env.sh"
