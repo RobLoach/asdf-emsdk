@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
-if [ -n "$ASDF_INSTALL_PATH" ]; then
-  source "${ASDF_INSTALL_PATH}/emsdk_env.sh"
+export EMSDK="${ASDF_INSTALL_PATH}"
+export EM_CONFIG="${ASDF_INSTALL_PATH}/.emscripten"
+export EM_CONFIG="${ASDF_INSTALL_PATH}/upstream/emscripten/cache"
+
+if [ -d "${ASDF_INSTALL_PATH}/node" ]; then
+  for DIR in $(ls "${ASDF_INSTALL_PATH}/node"); do
+    export EMSDK_NODE="${ASDF_INSTALL_PATH}/node/${DIR}/bin/node"
+  done
 fi
