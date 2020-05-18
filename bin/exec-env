@@ -1,11 +1,21 @@
 #!/usr/bin/env bash
 
-export EMSDK="${ASDF_INSTALL_PATH}"
-export EM_CONFIG="${ASDF_INSTALL_PATH}/.emscripten"
-export EM_CONFIG="${ASDF_INSTALL_PATH}/upstream/emscripten/cache"
+if [ -n "$ASDF_INSTALL_PATH" ]; then
+  if [ "${EMSDK-}" = "" ]; then
+    export EMSDK="${ASDF_INSTALL_PATH}"
+  fi
+  if [ "${EM_CONFIG-}" = "" ]; then
+    export EM_CONFIG="${ASDF_INSTALL_PATH}/.emscripten"
+  fi
+  if [ "${EM_CONFIG-}" = "" ]; then
+    export EM_CONFIG="${ASDF_INSTALL_PATH}/upstream/emscripten/cache"
+  fi
 
-if [ -d "${ASDF_INSTALL_PATH}/node" ]; then
-  for DIR in $(ls "${ASDF_INSTALL_PATH}/node"); do
-    export EMSDK_NODE="${ASDF_INSTALL_PATH}/node/${DIR}/bin/node"
-  done
+  if [ "${EMSDK_NODE-}" = "" ]; then
+    if [ -d "${ASDF_INSTALL_PATH}/node" ]; then
+      for DIR in $(ls "${ASDF_INSTALL_PATH}/node"); do
+        export EMSDK_NODE="${ASDF_INSTALL_PATH}/node/${DIR}/bin/node"
+      done
+    fi
+  fi
 fi
