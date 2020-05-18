@@ -1,3 +1,9 @@
 #!/usr/bin/env bash
 
-echo "."
+if [ -d "${ASDF_INSTALL_PATH}/node" ]; then
+  for DIR in $(ls "${ASDF_INSTALL_PATH}/node"); do
+    echo -n "node/${DIR}/bin "
+  done
+fi
+
+echo ". upstream/emscripten"

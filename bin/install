@@ -6,7 +6,7 @@ install_emscripten() {
     local install_path=$3
 
     "${install_path}/emsdk" install "${version}"
-    "${install_path}/emsdk" activate "${version}"
+    "${install_path}/emsdk" activate --embedded
     source "${install_path}/emsdk_env.sh"
 }
 
