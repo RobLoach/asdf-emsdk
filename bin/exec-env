@@ -30,6 +30,7 @@ if [ -n "$ASDF_INSTALL_PATH" ]; then
     if [ -d "${ASDF_INSTALL_PATH}/node" ]; then
       for DIR in $(ls "${ASDF_INSTALL_PATH}/node"); do
         export EMSDK_NODE="${ASDF_INSTALL_PATH}/node/${DIR}/bin/node"
+        export NODE_JS="${ASDF_INSTALL_PATH}/node/${DIR}/bin/node"
       done
     fi
   fi
