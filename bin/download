@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-download_emscripten() {
+download_emsdk() {
     local install_type=$1
     local version=$2
     local install_path=$3
@@ -8,4 +8,4 @@ download_emscripten() {
     git clone --branch "${version}" https://github.com/emscripten-core/emsdk.git "${install_path}"
 }
 
-download_emscripten $ASDF_INSTALL_TYPE $ASDF_INSTALL_VERSION $ASDF_INSTALL_PATH
+download_emsdk $ASDF_INSTALL_TYPE $ASDF_INSTALL_VERSION $ASDF_INSTALL_PATH
