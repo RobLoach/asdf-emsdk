@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+# Node.js
 if [ -d "${ASDF_INSTALL_PATH}/node" ]; then
   for DIR in $(ls "${ASDF_INSTALL_PATH}/node"); do
     echo -n "node/${DIR}/bin "

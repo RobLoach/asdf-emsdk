@@ -1,17 +1,26 @@
 #!/usr/bin/env bash
 
 if [ -n "$ASDF_INSTALL_PATH" ]; then
-  if [ "${EMSDK-}" = "" ]; then
+  if [ -z "$EMSDK" ]; then
     export EMSDK="${ASDF_INSTALL_PATH}"
   fi
-  if [ "${EM_CONFIG-}" = "" ]; then
+  if [ -z "$EM_CONFIG" ]; then
     export EM_CONFIG="${ASDF_INSTALL_PATH}/.emscripten"
   fi
-  if [ "${EM_CONFIG-}" = "" ]; then
-    export EM_CONFIG="${ASDF_INSTALL_PATH}/upstream/emscripten/cache"
+  if [ -z "$EMSCRIPTEN_ROOT" ]; then
+    export EMSCRIPTEN_ROOT="${ASDF_INSTALL_PATH}/emscripten/upstream"
+  fi
+  if [ -z "$EMCC_CACHE" ]; then
+    export EMCC_CACHE="${ASDF_INSTALL_PATH}/upstream/emscripten/cache"
+  fi
+  if [ -z "$BINARYEN_ROOT" ]; then
+    export BINARYEN_ROOT="${ASDF_INSTALL_PATH}/upstream"
+  fi
+  if [ -z "$LLVM_ROOT" ]; then
+    export LLVM_ROOT="${ASDF_INSTALL_PATH}/upstream/bin"
   fi
 
-  if [ "${EMSDK_NODE-}" = "" ]; then
+  if [ -z "$EMSDK_NODE" ]; then
     if [ -d "${ASDF_INSTALL_PATH}/node" ]; then
       for DIR in $(ls "${ASDF_INSTALL_PATH}/node"); do
         export EMSDK_NODE="${ASDF_INSTALL_PATH}/node/${DIR}/bin/node"

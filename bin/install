@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-install_emscripten() {
+install_emsdk() {
     local install_type=$1
     local version=$2
     local install_path=$3
@@ -10,4 +10,4 @@ install_emscripten() {
     source "${install_path}/emsdk_env.sh"
 }
 
-install_emscripten $ASDF_INSTALL_TYPE $ASDF_INSTALL_VERSION $ASDF_INSTALL_PATH
+install_emsdk $ASDF_INSTALL_TYPE $ASDF_INSTALL_VERSION $ASDF_INSTALL_PATH
