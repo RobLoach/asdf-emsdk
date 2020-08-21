@@ -1,0 +1,33 @@
+{
+  "projectName": "asdf-emsdk",
+  "projectOwner": "RobLoach",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "commitConvention": "none",
+  "contributors": [
+    {
+      "login": "RobLoach",
+      "name": "Rob Loach",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/25086?v=4",
+      "profile": "https://robloach.net/",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "fazibear",
+      "name": "Michał Kalbarczyk",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/687?v=4",
+      "profile": "https://puddleofcode.com/",
+      "contributions": [
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7
+}

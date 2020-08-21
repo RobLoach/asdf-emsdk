@@ -1,0 +1,19 @@
+{
+  "name": "asdf-emsdk",
+  "private": true,
+  "version": "0.0.1",
+  "description": "Emscripten SDK plugin for asdf version manager",
+  "devDependencies": {
+    "all-contributors-cli": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RobLoach/asdf-emsdk.git"
+  },
+  "author": "RobLoach",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/RobLoach/asdf-emsdk/issues"
+  },
+  "homepage": "https://github.com/RobLoach/asdf-emsdk#readme"
+}
