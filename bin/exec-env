@@ -8,7 +8,7 @@ if [ -n "$ASDF_INSTALL_PATH" ]; then
     export EM_CONFIG="${ASDF_INSTALL_PATH}/.emscripten"
   fi
   if [ -z "$EMSCRIPTEN_ROOT" ]; then
-    export EMSCRIPTEN_ROOT="${ASDF_INSTALL_PATH}/emscripten/upstream"
+    export EMSCRIPTEN_ROOT="${ASDF_INSTALL_PATH}/upstream/emscripten"
   fi
   if [ -z "$EMCC_CACHE" ]; then
     export EMCC_CACHE="${ASDF_INSTALL_PATH}/upstream/emscripten/cache"
