@@ -19,11 +19,17 @@ if [ -n "$ASDF_INSTALL_PATH" ]; then
   if [ -z "$LLVM_ROOT" ]; then
     export LLVM_ROOT="${ASDF_INSTALL_PATH}/upstream/bin"
   fi
+  if [ -z "$EM_LLVM_ROOT" ]; then
+    export EM_LLVM_ROOT="${ASDF_INSTALL_PATH}/upstream/bin"
+  fi
   if [ -z "$BINARYEN" ]; then
     export BINARYEN="${ASDF_INSTALL_PATH}/upstream"
   fi
   if [ -z "$BINARYEN_ROOT" ]; then
     export BINARYEN_ROOT="${ASDF_INSTALL_PATH}/upstream"
+  fi
+  if [ -z "$EM_BINARYEN_ROOT" ]; then
+    export EM_BINARYEN_ROOT="${ASDF_INSTALL_PATH}/upstream"
   fi
 
   if [ -z "$EMSDK_NODE" ]; then
