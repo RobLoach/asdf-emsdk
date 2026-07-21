@@ -34,9 +34,12 @@ if [ -n "$ASDF_INSTALL_PATH" ]; then
 
   if [ -z "$EMSDK_NODE" ]; then
     if [ -d "${ASDF_INSTALL_PATH}/node" ]; then
-      for DIR in $(ls "${ASDF_INSTALL_PATH}/node"); do
-        export EMSDK_NODE="${ASDF_INSTALL_PATH}/node/${DIR}/bin/node"
-        export NODE_JS="${ASDF_INSTALL_PATH}/node/${DIR}/bin/node"
+      # Pick the newest bundled node deterministically (glob expands sorted).
+      for DIR in "${ASDF_INSTALL_PATH}"/node/*/bin/node; do
+        if [ -x "$DIR" ]; then
+          export EMSDK_NODE="$DIR"
+          export NODE_JS="$DIR"
+        fi
       done
     fi
   fi

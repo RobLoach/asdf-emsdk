@@ -4,7 +4,7 @@
 </div>
 <hr />
 
-[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/RobLoach/asdf-emsdk/Main%20workflow?style=flat-square)](https://github.com/RobLoach/asdf-emsdk/actions)
+[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/RobLoach/asdf-emsdk/workflow.yml?branch=master&style=flat-square)](https://github.com/RobLoach/asdf-emsdk/actions)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 [![License](https://img.shields.io/github/license/RobLoach/asdf-emsdk?style=flat-square&color=brightgreen)](https://github.com/RobLoach/asdf-emsdk/blob/master/LICENSE)
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->

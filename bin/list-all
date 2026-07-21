@@ -9,7 +9,7 @@ sort_versions() {
 
 versions=$(
   git ls-remote --tags https://github.com/emscripten-core/emsdk.git |
-    awk -F'/' '/[0-9].[0-9].[0-9].*/ { print $3}' |
+    awk -F'/' '/[0-9]+\.[0-9]+\.[0-9]+/ { print $3}' |
     sort_versions |
     xargs
 )

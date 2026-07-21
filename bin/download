@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -euo pipefail
+
 download_emsdk() {
     local install_type=$1
     local version=$2
@@ -8,4 +10,4 @@ download_emsdk() {
     git clone --depth=1 --branch "${version}" https://github.com/emscripten-core/emsdk.git "${install_path}"
 }
 
-download_emsdk $ASDF_INSTALL_TYPE $ASDF_INSTALL_VERSION $ASDF_INSTALL_PATH
+download_emsdk "$ASDF_INSTALL_TYPE" "$ASDF_INSTALL_VERSION" "$ASDF_INSTALL_PATH"
