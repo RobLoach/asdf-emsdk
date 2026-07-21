@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+current_script_path="${BASH_SOURCE[0]}"
+plugin_dir=$(dirname "$(dirname "$current_script_path")")
+
+# Optional filter passed by `asdf latest emsdk <query>`.
+query="${1:-}"
+
+# Reuse list-all, keep only stable x.y.z tags (drop any pre-releases that
+# carry letters), apply the optional query filter, and return the highest.
+"${plugin_dir}/bin/list-all" |
+  tr ' ' '\n' |
+  grep -E '^[0-9]+\.[0-9]+\.[0-9]+$' |
+  grep -E "^${query}" |
+  tail -n 1
