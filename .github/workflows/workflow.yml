@@ -9,10 +9,14 @@ on:
     paths-ignore:
       - "**.md"
       - ".all-contributorsrc"
+  workflow_dispatch:
 
 jobs:
   plugin_test:
-    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
     steps:
       - name: asdf_plugin_test
         uses: asdf-vm/actions/plugin-test@v4

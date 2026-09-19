@@ -4,7 +4,7 @@
   "version": "1.2.0",
   "description": "Emscripten SDK plugin for asdf version manager",
   "devDependencies": {
-    "all-contributors-cli": "*"
+    "all-contributors-cli": "^6.26.1"
   },
   "repository": {
     "type": "git",
